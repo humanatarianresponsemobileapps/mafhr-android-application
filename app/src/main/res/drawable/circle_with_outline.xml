@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Light Red Background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/lightred" />
+        </shape>
+    </item>
+
+    <!-- White Center with Red Border -->
+    <item android:inset="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/lightred" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/red" />
+        </shape>
+    </item>
+</layer-list>

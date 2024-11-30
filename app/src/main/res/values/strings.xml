@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">anshu_s_application2</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="lbl_60">60</string>
+    <string name="lbl_80">80</string>
+    <string name="lbl_alerts">Alerts</string>
+    <string name="lbl_40">40</string>
+    <string name="lbl_drone">Drone</string>
+    <string name="lbl_staff">Staff</string>
+    <string name="lbl_27_tue">27 TUE</string>
+    <string name="lbl_home">Home</string>
+    <string name="lbl_30_fri">30  FRI</string>
+    <string name="lbl_call">Call</string>
+    <string name="lbl_100">100</string>
+    <string name="lbl_admin">Admin</string>
+    <string name="lbl_login">Login</string>
+    <string name="lbl_health">Health</string>
+    <string name="lbl_camera">Camera</string>
+    <string name="msg_schedule_area">Schedule - AREA 04/0999</string>
+    <string name="lbl_70">70</string>
+    <string name="lbl_90">90</string>
+    <string name="lbl_30">30</string>
+    <string name="lbl_50">50</string>
+    <string name="lbl_map">Map</string>
+    <string name="lbl_01_fri">01  FRI</string>
+    <string name="lbl_26_mon">26 MON</string>
+    <string name="lbl_29_thur">29 THUR</string>
+    <string name="lbl_incident">Incident</string>
+    <string name="lbl_28_wed">28 WED</string>
+    <string name="lbl_username">Username</string>
+    <string name="lbl">\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022</string>
+    <string name="lbl_register">Register?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

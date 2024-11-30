@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_health"
+        android:icon="@drawable/img_nav_health"
+    android:title="@string/lbl_health" />
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@drawable/img_nav_map"
+    android:title="@string/lbl_map" />
+    <item
+        android:id="@+id/nav_call"
+        android:icon="@drawable/img_nav_call"
+    android:title="@string/lbl_call" />
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/img_nav_home"
+    android:title="@string/lbl_home" />
+    <item
+        android:id="@+id/nav_alerts"
+        android:icon="@drawable/img_nav_alerts"
+    android:title="@string/lbl_alerts" />
+</menu>
