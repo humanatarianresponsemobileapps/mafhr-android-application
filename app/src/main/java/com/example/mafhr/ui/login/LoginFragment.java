@@ -49,14 +49,13 @@ public class LoginFragment extends Fragment {
             // Get input values from the fields
             String username = String.valueOf(binding.username.getText()).trim();
             String password = String.valueOf(binding.password.getText()).trim();
-
             boolean error = false;
 
-//            // Validate username
-//            error = validateUsername(username);
-//
-//            // Validate password
-//            error = error || validatePassword(password);
+            // Validate username
+            error = validateUsername(username);
+
+            // Validate password
+            error = error || validatePassword(password);
 
             // Proceed to next screen if no errors were found
             if(!error){
