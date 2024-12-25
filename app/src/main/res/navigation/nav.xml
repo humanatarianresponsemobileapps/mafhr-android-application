@@ -18,5 +18,14 @@
         android:id="@+id/admin_dashboard"
         android:name="com.example.mafhr.admin_dashboard"
         android:label="fragment_admin_dashboard"
-        tools:layout="@layout/fragment_admin_dashboard" />
+        tools:layout="@layout/fragment_admin_dashboard" >
+        <action
+            android:id="@+id/action_admin_dashboard_to_drone"
+            app:destination="@id/drone" />
+    </fragment>
+    <fragment
+        android:id="@+id/drone"
+        android:name="com.example.mafhr.drone"
+        android:label="fragment_drone"
+        tools:layout="@layout/fragment_drone" />
 </navigation>

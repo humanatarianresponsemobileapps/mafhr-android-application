@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -14,11 +15,13 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private List<String> textList;
     private List<Integer> imgList;
+    private final NavController navController;
 
 
-    public MyAdapter(List<String> textList, List<Integer> imgList) {
+    public MyAdapter(List<String> textList, List<Integer> imgList, NavController navController) {
         this.textList = textList;
         this.imgList = imgList;
+        this.navController = navController;
     }
 
     @NonNull
@@ -32,6 +35,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.textView.setText(textList.get(position));
         holder.btnIcon.setImageResource(imgList.get(position));
+
+        holder.itemView.setOnClickListener(v -> {
+            switch (position) {
+                case 0:
+                    navController.navigate(R.id.action_admin_dashboard_to_drone);
+                    break;
+//                Will be implemented in the future
+//                case 1:
+//                    navController.navigate(R.id.action_admin_dashboard_to_cameraFragment);
+//                    break;
+//                case 2:
+//                    navController.navigate(R.id.action_admin_dashboard_to_staffFragment);
+//                    break;
+//                case 3:
+//                    navController.navigate(R.id.action_admin_dashboard_to_incidentFragment);
+//                    break;
+            }
+        });
     }
 
     @Override
