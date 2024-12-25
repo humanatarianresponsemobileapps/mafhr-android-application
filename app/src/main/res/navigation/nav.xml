@@ -27,5 +27,14 @@
         android:id="@+id/drone"
         android:name="com.example.mafhr.drone"
         android:label="fragment_drone"
-        tools:layout="@layout/fragment_drone" />
+        tools:layout="@layout/fragment_drone" >
+        <action
+            android:id="@+id/action_drone_to_drone_video"
+            app:destination="@id/drone_video" />
+    </fragment>
+    <fragment
+        android:id="@+id/drone_video"
+        android:name="com.example.mafhr.drone_video"
+        android:label="fragment_drone_video"
+        tools:layout="@layout/fragment_drone_video" />
 </navigation>

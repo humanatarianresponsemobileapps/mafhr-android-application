@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -88,7 +89,7 @@ public class drone extends Fragment {
 
         NavController navController = NavHostFragment.findNavController(this);
         RecyclerView recyclerView = binding.getRoot().findViewById(R.id.recyclerGriddronetext);
-        RecyclerView.Adapter adapter = new MyAdapter(textList,imgList,navController);
+        RecyclerView.Adapter adapter = new DroneAdapter(textList,imgList,navController);
         recyclerView.setAdapter(adapter);
 
         setHasOptionsMenu(true);
@@ -101,28 +102,21 @@ public class drone extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Find the Toolbar in the fragment layout
         Toolbar toolbar = view.findViewById(R.id.toolbarToolbar);
 
-        // Get the NavController
-        NavController navController = NavHostFragment.findNavController(this);
+        // Attach the toolbar to the activity's action bar
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
-        // Set up the Toolbar with the NavController
+        // Configure the NavController
+        NavController navController = NavHostFragment.findNavController(this);
         NavigationUI.setupWithNavController(toolbar, navController);
 
-        // Optional: Handle custom toolbar actions (if required)
+        // Optional: Add navigation button behavior
         toolbar.setNavigationOnClickListener(v -> {
-            // Handle back navigation or other behavior
-            navController.navigateUp();
-        });
-
-        toolbar.setNavigationOnClickListener(v -> {
-            // Navigate up in the NavController stack
             if (!navController.navigateUp()) {
-                // Handle custom behavior if navigation is not possible
                 requireActivity().onBackPressed();
             }
         });
-
     }
+
 }
