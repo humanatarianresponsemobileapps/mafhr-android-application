@@ -66,7 +66,7 @@ public class drone_video extends Fragment {
     // TODO: Rename and change types and number of parameters
 
     private static final String TAG = "DroneVideo";
-    private static final String VIDEO_API_URL = "http://10.0.2.2:5000/get_video/arms_y_shape";
+    private static String VIDEO_API_URL;
     private static VideoView videoView;
     public static drone_video newInstance(String param1, String param2) {
         drone_video fragment = new drone_video();
@@ -102,7 +102,14 @@ public class drone_video extends Fragment {
         FragmentDroneVideoBinding binding = FragmentDroneVideoBinding.inflate(inflater, container, false);
 
         videoView = binding.getRoot().findViewById(R.id.videoView);
-
+        Bundle bundle = getArguments();
+        int position = bundle.getInt("position");
+        if(position == 0){
+            VIDEO_API_URL = "http://10.0.2.2:5000/get_video/arms_y_shape";
+        }
+        else{
+            VIDEO_API_URL = "http://10.0.2.2:5000/get_video/arms_up";
+        }
         // Download video from API
         downloadVideo(videoFile -> {
             if (videoFile != null) {
@@ -113,23 +120,6 @@ public class drone_video extends Fragment {
                 Log.e(TAG, "Failed to download video");
             }
         });
-
-        // Set video URI (replace "your_video_file.mp4" with the actual file path)
-        Bundle bundle = getArguments();
-        int position = bundle.getInt("position");
-//        String videoPath = "";
-//        if(position == 0){
-//            videoPath = "android.resource://" + mainActivity.getPackageName() + "/" + R.raw.arms_y_shape;
-//        }
-//        else{
-//            videoPath = "android.resource://" + mainActivity.getPackageName() + "/" + R.raw.arms_up;
-//        }
-
-//        String videoPath = "file:///C:/Users/madhi/AndroidStudioProjects/MAFHR/app/src/main/res/raw/arms_y_shape.mp4";
-//        Uri videoUri = Uri.parse(videoPath);
-//        C:\Users\madhi\AndroidStudioProjects\MAFHR\app\src\main\res\raw
-//        videoView.setVideoURI(videoUri);
-//        videoView.start();
 
         return binding.getRoot();
     }
