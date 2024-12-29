@@ -19,6 +19,9 @@
     <string name="lbl_health">Health</string>
     <string name="lbl_camera">Camera</string>
     <string name="msg_schedule_area">Schedule - AREA 04/0999</string>
+    <string name="login_failed">Incorrect Username or Password</string>
+    <string name="register_failed">Register Failed</string>
+    <string name="register_success">Register Success</string>
     <string name="lbl_70">70</string>
     <string name="lbl_90">90</string>
     <string name="lbl_30">30</string>

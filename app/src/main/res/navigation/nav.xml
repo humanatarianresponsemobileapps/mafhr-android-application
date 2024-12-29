@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_admin_dashboard"
             app:destination="@id/admin_dashboard" />
+        <action
+            android:id="@+id/action_loginFragment_to_register"
+            app:destination="@id/register" />
     </fragment>
     <fragment
         android:id="@+id/admin_dashboard"
@@ -37,4 +40,13 @@
         android:name="com.example.mafhr.drone_video"
         android:label="fragment_drone_video"
         tools:layout="@layout/fragment_drone_video" />
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.mafhr.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
