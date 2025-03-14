@@ -118,4 +118,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries or support, please contact Anshu Madhikarmi at anshu.madhikarmi@deakin.edu.au
 
+# Demo Video
+https://youtu.be/VFGGvWpUbdI?si=xKYlVbV_98DIWsld
+
  
